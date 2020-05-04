@@ -1,0 +1,133 @@
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+</head>
+<div class="ui fixed inverted menu">
+    <style>
+      body {
+        background-color: #FFFFFF;
+      }
+      .ui.menu .item img.logo {
+        margin-right: 1.5em;
+      }
+      .main.container {
+        margin-top: 7em;
+      }
+      .wireframe {
+        margin-top: 2em;
+      }
+      .ui.footer.segment {
+        margin: 5em 0em 0em;
+        padding: 5em 0em;
+      }
+    .logo {
+      padding-right: -2px;
+    }        
+    </style>
+    <div class="ui container">
+      <a href="#" class="header item">
+        <img class="logo" src="https://i.imgur.com/FGCBzvC.png"> 
+         <e style="font-family: 'Montserrat', sans-serif;font-size: 30px">FEVICI</e>
+       </a>
+      <a href="#" class="item"><i class="home icon"></i>Home</a>
+      <a href="#" class="item"><i class="mail icon"></i> Anuncios</a>
+      <div class="ui simple dropdown item">
+        Dropdown <i class="dropdown icon"></i>
+        <div class="menu">
+          <a class="item" href="#">Link Item</a>
+          <a class="item" href="#">Link Item</a>
+          <div class="divider"></div>
+          <div class="header">Header Item</div>
+          <div class="item">
+            <i class="dropdown icon"></i>
+            Sub Menu
+            <div class="menu">
+              <a class="item" href="#">Link Item</a>
+              <a class="item" href="#">Link Item</a>
+            </div>
+          </div>
+          <a class="item" href="#">Link Item</a>
+        </div>
+      </div>
+      <div class="right menu">
+        <div class="item">
+          
+       <a class="ui basic teal button" href="#"><i class="sign in icon"></i>Log in</a>
+        </div>
+        <div class="item">
+        <a class="ui basic blue button" href="#"><i class="add user icon"></i>Sign up</a>
+        </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="ui main text container">
+    <a href="{{url_for('index')}}" style="color: red">Go Back</a>
+    <h1 class="ui header">  This is the layout  </h1>
+    <p>
+        <h2>{% block heading %}With this Heading{% endblock %}</h2>
+        {% block body %}And this body
+        {% endblock %}        
+        <a href="https://github.com/doabit/semantic-ui-sass"></a> </p>
+    <hr>
+    <div class="ui segment">
+      <div class="ui header">Rails Considerations</div>
+      <p>When using Semantic-UI with Ruby on Rails you can take advantage of the helper methods that come with the semantic-ui gem. The icon helper, "semantic_icon('add user')" will generate the appropriate html for the semantic-ui icon. Here is the code for a sign up button w/ an icon for a Rails application that uses devise for authentication... </p>
+      <br>
+      <strong> <%=link_to semantic_icon('add user')+'Sign up', new_user_registration_path, class: 'ui basic teal button' %> </strong>
+      <br>
+        <br>
+      <p><em> Note the concatination of the semantic icon helper with the string 'Sign up'.</em></p><p> If you don't need a button, you can use the rails helper 'link_to' to create a menu item with an icon like so... <%=link_to semantic_icon('home')+'Home', root_path, class: 'item' %></p>
+    </div>
+      <br>
+     
+  </div>
+<br>
+  <div class="ui inverted vertical footer segment">
+    <div class="ui center aligned container">
+      <div class="ui stackable inverted divided grid">
+        <div class="three wide column">
+          <h4 class="ui inverted header">About</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Link One</a>
+            <a href="#" class="item">Link Two</a>
+            <a href="#" class="item">Link Three</a>
+            <a href="#" class="item">Link Four</a>
+          </div>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui inverted header">Company</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Link One</a>
+            <a href="#" class="item">Link Two</a>
+            <a href="#" class="item">Link Three</a>
+            <a href="#" class="item">Link Four</a>
+          </div>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui inverted header">Pricing</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Link One</a>
+            <a href="#" class="item">Link Two</a>
+            <a href="#" class="item">Link Three</a>
+            <a href="#" class="item">Link Four</a>
+          </div>
+        </div>
+        <div class="seven wide column">
+          <h4 class="ui inverted header">Footer Header</h4>
+          <p>Find more at<strong> <a href="http://webteamuniversity.tech"> WEBteam University</a></strong></p>
+        </div>
+      </div>
+      <div class="ui inverted section divider"></div>
+      <img src="http://placeimg.com/35/35/any" class="ui centered mini image">
+      <div class="ui horizontal inverted small divided link list">
+        <a class="item" href="#">Site Map</a>
+        <a class="item" href="#">Contact Us</a>
+        <a class="item" href="#">Terms and Conditions</a>
+        <a class="item" href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+

@@ -1,0 +1,17 @@
+<html>
+    {% if new_year %}  Percentage signs indicate pythonish syntax 
+        <h1> Happy New Year</h1>
+    {% else %} 
+        <h1> {{ new_year }} </h1>   
+    {% endif %} 
+    <body>
+        {% for name in names %}
+            <li>{{name}}</li>
+        {% endfor %}
+    </body>
+    
+    <br><a href="{{url_for('david')}}">Go A</a>
+    <br><a href="{{url_for('alan')}}">Go B</a>
+    <br><br>
+    <br><a href="{{url_for('layout')}}" style="color: red">Go layout</a>
+</html> 
